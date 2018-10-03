@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body background="pasion.jpg">
+
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre">PON TU NOMBRE PIXITA</label><br><br>
+        <input id="nombre" type="text" name="nombre" placeholder="Nombre de usuario"/><br><br>
+        <!-- El placeholder vale para poner el texto algo claro en la caja, al escribir se va-->
+        <label for="apellido">PON TU APELLIO TURBOPIXITA</label><br><br>
+        <input id="apellido" type="text" name="apellidos[]" value="maricarmen"/><br><br>
+        <!-- El Value es para dejar algo ya escrito al abrirla-->
+        <label for="apellido">PON LOS APELLIDO DE TU HERMANA</label><br><br>
+        <input id="apellido" type="text" name="apellidos[]" value="maricarmen"/><br><br>
+
+        <input type="hidden"><br><br>
+        <input type="password"><br><br>
+        <input type="image" src="haO.gif"><br><br>
+
+        <input type="file" value="subir ficheros!!!!" name="coso">
+
+        <label for="ra1">PON LOS APELLIDO DE TU HERMANA</label><br><br>
+        <input type="radio" value="ra1" name="fruta">
+        <label for="ra2">PON LOS APELLIDO DE TU HERMANA</label><br><br>
+        <input type="radio" value="ra2" name="fruta">
+        <label for="ra3">PON LOS APELLIDO DE TU HERMANA</label><br><br>
+        <input type="radio" value="ra3" name="fruta">
+        
+        <label for="terminos">PON LOS APELLIDO DE TU HERMANA</label><br><br>
+        <input type="checkbox" value="Si" name="terminos">Confirmar Datos LOPD<br>
+
+        <label for="liqu">TU QUE BEBE</label>
+        <input type="checkbox" value="agua" name="liqu[]">awa<br>
+        <label for="liqu">TU QUE BEBE</label>
+        <input type="checkbox" value="cola" name="liqu[]">cola<br>
+        <label for="liqu">TU QUE BEBE</label>
+        <input type="checkbox" value="zumo" name="liqu[]">sumito<br><br>
+
+        <label for="colorsiyo">COLOREEEEEE</label><br><br>  
+        <input type="color" value="colorsiyo" name="colorsiyo"><br><br>
+        <input type="submit"><br><br>
+
+        <input type="date"><br><br>
+        <input type="datetime-local"><br><br>
+        <input type="time"><br><br>
+        <input type="month"><br><br>
+        <input type="week"><br><br>
+        <input type="email"><br><br>
+
+        <input type="search">
+        <input type="number" value="25" min="0" step="5" max="500">
+        <input type="range" value="5" min="0" step="2" max="10" list="ticks2">
+        <datalist id="ticks2">
+            <option>0</option>
+            <option>2</option>
+            <option>4</option>
+        </datalist>
+
+    </form>
+
+</body>
+</html>

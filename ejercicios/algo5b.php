@@ -16,10 +16,10 @@ $start = microtime(true);
 $arrayLineal = range(1,$dim*$dim);
 shuffle($arrayLineal);
 
-
+$k =0;
         for($i = 0;$i<$dim;$i++){
             for($j =0;$j<$dim;$j++){
-                $arr[$i][$j] = $arrayLineal[$j++];
+                $arr[$i][$j] = $arrayLineal[$k++];  
                 printf("%03d ",$arr[$i][$j]);
             }echo "<br />";
         }

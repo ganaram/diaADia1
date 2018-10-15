@@ -1,23 +1,21 @@
 <?php
-require_once 'main.php';
 
 // Introducimos una página simple, dando instrucciones al usuario.
 
 echo '<hr>';
+
+$mensaje="";
 
 $error = 'Usted ha introducido un dato erróneo, revise las indicaciones y cambie la cifra.';
 
 // Declaramos una variable "error", la cual se imprimirá siempre que se introduzca un dato incorrecto.
 
 if(empty($_GET)){
-    echo 'Usted no ha introducido ningún dato.<br><br> Añada <b>"?consumo=cifra"</b> a la URL.';
-    die;
+    $mensaje = 'Usted no ha introducido ningún dato.<br><br> Añada <b>"?consumo=cifra"</b> a la URL.';
 }else if($_GET['consumo']<=0){
-    echo $error;
-    die;
+    $mensaje="Usted ha introducido un dato erróneo, revise las indicaciones y cambie la cifra.";
 }else if(!is_numeric($_GET['consumo'])){
-    echo $error;
-    die;
+    $mensaje="Usted ha introducido un dato erróneo, revise las indicaciones y cambie la cifra.";
 }
 
 // Comprobamos la validez del dato, en caso de que sea inválida, cesamos la ejecución.
@@ -50,5 +48,7 @@ if($consumo<=100){
     $coste = (($consumo-1000)*0.8)+$costerango3;
 }
 
-echo 'Ha consumido ' . $consumo . ' m³ de agua con un coste de ' . $coste . ' €.';
+$mensaje = 'Ha consumido ' . $consumo . ' m³ de agua con un coste de ' . $coste . ' €.';
 
+require_once 'view.inc.php';
+?>

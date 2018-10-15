@@ -21,7 +21,6 @@ if(isset($_POST['form_alta'])){
     }if(empty($sexo)){
         $error['sexo'] = ['campo vacío' => 'El campo sexo es obligatorio'];
     }
-    //validacion
         if(!preg_match("/[a-zA-Z]+/",$nombre)){
             echo "Tiene que ser sin tilde y sin espacios."
         }

@@ -10,3 +10,6 @@
 <h1>Práctica 1</h1>
 <p>Introduzca un número mayor a 0, dependiendo del rango que abarque, el precio total
 del consumo será plasmado aquí abajo. </p>
+<hr>
+<?=$mensaje?>
+</body>

@@ -56,7 +56,7 @@ if(isset($_POST['send'])){
 
 }
 
-if(empty($error)){
+if(isset($error)){
     // printDataFormated($error);
     require_once 'views/data.inc.php';
 }else{

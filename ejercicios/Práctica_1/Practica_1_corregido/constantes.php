@@ -1,4 +1,9 @@
 <?php
+
+/**
+*Definimos las franjas en las que vamos a cobrar dependiendo
+*del consumo. También el importe por franja.
+*/
 //Constantes
 define('FRANJA1',100);
 define('FRANJA2',500);

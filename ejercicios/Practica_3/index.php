@@ -6,15 +6,14 @@ if(isset($_POST['send'])){
     $user = $_POST['user'];
     $passwd = $_POST['passwd'];
 
-    if(!preg_match("/^[a-z\d_]{2,20}$/i",$user)){
+    if(!preg_match("/^[a-z\d_]*$/",$user)){
         $error['user']['not_valid'] = "Introduzca un nombre de usuario correcto. No puede contener
         espacios.";
     }if(strlen($user)<5 ){
         $error['user']['min_lenght'] = "El usuario debe tener almenos 5 caracteres.";
     }if(strlen($user)>20 ){
         $error['user']['max_lenght'] = "El usuario no puede tener más de 20 caracteres.";
-    }if(!preg_match("/^[a-z]{3,}[A-Z]{3,}[0-9]{3,}$/
-",$passwd)){
+    }if(!preg_match("/^(?=(.*?[A-Z]){3})(?=(.*?[a-z]){3})(?=(.*?\d){3})[0-9a-zA-Z]{9,}.*$/",$passwd)){
         $error['passwd']['not_valid'] = "Introduzca una contraseña válida. Mínimo 3 dígitos, 
         3 mayúsculas y 3 minúsculas.";  
     }if(strlen($passwd)<9){

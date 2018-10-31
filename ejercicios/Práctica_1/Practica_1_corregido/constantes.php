@@ -5,6 +5,7 @@
 *del consumo. También el importe por franja.
 */
 //Constantes
+define('FRANJA0',0)
 define('FRANJA1',100);
 define('FRANJA2',500);
 define('FRANJA3',1000);

@@ -20,10 +20,9 @@ if(isset($_POST['form_alta'])){
         $error['email'] = ['campo vacío' => 'El campo email es obligatorio'];
     }if(empty($sexo)){
         $error['sexo'] = ['campo vacío' => 'El campo sexo es obligatorio'];
+    }if(!preg_match("/[a-z0-9]{8,}/",$nombre)){
+        echo "Tiene que ser sin tilde y sin espacios."
     }
-        if(!preg_match("/[a-zA-Z]+/",$nombre)){
-            echo "Tiene que ser sin tilde y sin espacios."
-        }
 
         require_once 'form_sended.inc.php';
 

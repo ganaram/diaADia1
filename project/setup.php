@@ -12,3 +12,5 @@ define('APP_URL',$url.$serverName.$request);
 define('APP_PARTH',__DIR__);
 //Nombre de la APP
 define('APP_NAME','project');
+
+session_start();

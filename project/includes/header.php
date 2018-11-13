@@ -19,15 +19,21 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+    <?php if(!isset($_SESSION['userdata'])) :?>
       <li class="nav-item active">
-        <a class="nav-link" href="/project/login">Acceso <span class="sr-only"></span></a>
+        <a class="nav-link" href="<?=APP_URL?>login">Acceso <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=APP_URL?>register">Crear Cuenta</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Donar</a>
+      <?php else:?>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?=APP_URL?>login"><?=$_SESSION['userdata']['username']?> <span class="sr-only"></span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=APP_URL?>logout">Logout</a>
+      </li>
+      <?php endif;?>
     </ul>
   </div>
 </div>

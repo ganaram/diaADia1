@@ -1,10 +1,5 @@
 <?php
     require_once '../database/conexion.php';
-    require_once '../setup.php';
-
-    if(isset($_SESSION['userdata'])){
-        header("Location: ".APP_URL);
-    }
 
     if(isset($_POST['login'])){
         $username = trim($_POST['username']);

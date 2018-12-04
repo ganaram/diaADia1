@@ -1,7 +1,6 @@
 <?php
 
     require_once '../database/conexion.php';
-g
     
     if( isset($_POST['registro'])){
         $username = $_POST['username'] ?? null;

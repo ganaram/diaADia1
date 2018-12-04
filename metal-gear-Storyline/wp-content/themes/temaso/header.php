@@ -7,11 +7,14 @@
 			</header>
 
 		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li>
-				</ul>
-            </nav>
+			<?php
+			wp_nav_menu(array(
+				'theme_location'	=>'main-menu',
+				'depth'				=>2,
+				'container_clas'	=>'collapse navbar-collapse',
+				'container_id'		=>'bs-example-navbar-collapse-1',
+				'menu_class'		=>'navbar-nav ml-auto',
+				'walker'			=>new WP_Bootstrap_Navwalker()
+			));
+			?>
             <?php wp_head()?>
